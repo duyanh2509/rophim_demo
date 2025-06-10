@@ -1,0 +1,558 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+common-title, body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe .title, body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .title, body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .title, .list-new-movie .new-movies .new-movie-list .new-movie .title {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+}
+
+common-sub-title, body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe .sub-title, body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .sub-title, body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .sub-title, .list-new-movie .new-movies .new-movie-list .new-movie .sub-title {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #AAAAAA;
+}
+
+common-see-more, body main .content .categories .category-title .see-more {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+common-categories-title, body main .genre-suggestions h2, body main .top-ten-movies .top-movies-title h2, body main .miss-old-disney .old-disney-movies .disney-movies-title h2, body main .cartoon-movies-for-adult .list-cartoon-movies .list-cartoon-movies-title h2 {
+  font-size: 25.2px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+  padding: 20px;
+}
+
+common-topic-title, body main .genre-suggestions .list-genres .genre1 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre2 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre3 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre4 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre5 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre6 .genre-detail .topic-title, body main .genre-suggestions .list-genres .other-genre .genre-detail .topic-title {
+  font-size: 22.4px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+
+common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre2 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre3 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre4 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre5 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre6 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .other-genre .genre-detail .topic-detail {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+
+.list-new-movie {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #191B24;
+}
+.list-new-movie .new-movies {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 1rem;
+}
+.list-new-movie .new-movies .new-movies-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+.list-new-movie .new-movies .new-movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+.list-new-movie .new-movies .new-movie-list .new-movie {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.list-new-movie .new-movies .new-movie-list .new-movie .new-movie-img {
+  max-width: 183px;
+  max-height: 274px;
+}
+.list-new-movie .new-movies .new-movie-list .new-movie .new-movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.list-new-movie .new-movies .new-movie-list .new-movie p {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body header {
+  background-color: #333;
+  width: 100%;
+  overflow: hidden;
+}
+body header .header-container {
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+body header .header-container .wrapper-logo {
+  max-width: 134px;
+  max-height: 40px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+body header .header-container .wrapper-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body header .header-container .input-container {
+  display: flex;
+  max-width: 300px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+body header .header-container .input-container input {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 1rem;
+  background-color: rgba(255, 255, 255, 0.281);
+  color: #fff;
+  font-size: 1em;
+  border-radius: 0.4rem;
+  border: 1px solid black;
+}
+body header .header-container .header-elements-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  flex-shrink: 1;
+}
+body header .header-container .header-elements-container .header-elements {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+body header .header-container .header-elements-container .list-elements {
+  padding: 0 8px;
+  white-space: nowrap;
+}
+body header .header-container .header-elements-container .list-elements a {
+  text-decoration: none;
+  color: white;
+}
+body header .header-container .header-elements-container .download-app {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 1;
+  overflow: hidden;
+}
+body header .header-container .header-elements-container .download-app p {
+  color: white;
+  margin: 0;
+}
+body header .header-container .header-elements-container .member-button {
+  flex-shrink: 1;
+  overflow: hidden;
+}
+body header .header-container .header-elements-container .member-button button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: black;
+  cursor: pointer;
+  overflow: hidden;
+}
+body main {
+  width: 100%;
+  overflow: hidden;
+}
+body main .genre-suggestions {
+  width: 100%;
+  background-color: #191b24;
+}
+body main .genre-suggestions .list-genres {
+  padding: 0 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+body main .genre-suggestions .list-genres .genre1, body main .genre-suggestions .list-genres .genre2, body main .genre-suggestions .list-genres .genre3, body main .genre-suggestions .list-genres .genre4, body main .genre-suggestions .list-genres .genre5, body main .genre-suggestions .list-genres .genre6, body main .genre-suggestions .list-genres .other-genre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 15px;
+  min-height: 110px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body main .genre-suggestions .list-genres .genre1:hover, body main .genre-suggestions .list-genres .genre2:hover, body main .genre-suggestions .list-genres .genre3:hover, body main .genre-suggestions .list-genres .genre4:hover, body main .genre-suggestions .list-genres .genre5:hover, body main .genre-suggestions .list-genres .genre6:hover, body main .genre-suggestions .list-genres .other-genre:hover {
+  transform: translateY(-5px) scale(1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+body main .genre-suggestions .list-genres .genre1 {
+  background-color: #007aff;
+}
+body main .genre-suggestions .list-genres .genre1 .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .genre-suggestions .list-genres .genre2 {
+  background-color: #757575;
+}
+body main .genre-suggestions .list-genres .genre2 .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .genre-suggestions .list-genres .genre3 {
+  background-color: #20c997;
+}
+body main .genre-suggestions .list-genres .genre3 .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .genre-suggestions .list-genres .genre4 {
+  background-color: #6f42c1;
+}
+body main .genre-suggestions .list-genres .genre4 .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .genre-suggestions .list-genres .genre5 {
+  background-color: #d63384;
+}
+body main .genre-suggestions .list-genres .genre5 .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .genre-suggestions .list-genres .genre6 {
+  background-color: #dc3545;
+}
+body main .genre-suggestions .list-genres .genre6 .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .genre-suggestions .list-genres .other-genre {
+  background-color: #6c757d;
+}
+body main .genre-suggestions .list-genres .other-genre .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .genre-suggestions .list-genres .other-genre .genre-detail {
+  padding: 0;
+  width: 152px;
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+body main .content {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #191B24;
+}
+body main .content .categories {
+  display: flex;
+  padding: 32px;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+body main .content .categories .category-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 184px;
+  max-height: 111.89px;
+  gap: 1.5rem;
+}
+body main .content .categories .category-title h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  background: linear-gradient(235deg, white 30%, #674196 130%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body main .content .categories .movie-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+body main .content .categories .movie-list .movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+body main .content .categories .movie-list .movie .movie-img-container {
+  max-width: 360px;
+  max-height: 202px;
+}
+body main .content .categories .movie-list .movie .movie-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+body main .content .categories .movie-list .movie p {
+  font-size: 14px;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .top-ten-movies {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #191B24;
+}
+body main .top-ten-movies .top-movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+body main .top-ten-movies .top-movie-list .top-movie {
+  width: 100%;
+  height: auto;
+}
+body main .top-ten-movies .top-movie-list .top-movie:nth-child(even) .thumbnail {
+  transform: scale(-1, 1);
+}
+body main .top-ten-movies .top-movie-list .top-movie:nth-child(even) .thumbnail .top-movie-img {
+  transform: scale(1, 1);
+}
+body main .top-ten-movies .top-movie-list .top-movie:nth-child(even) .thumbnail .top-movie-img img {
+  transform: scale(-1, 1);
+}
+body main .top-ten-movies .top-movie-list .top-movie .thumbnail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 406.5px;
+}
+body main .top-ten-movies .top-movie-list .top-movie .thumbnail:hover .top-movie-img {
+  width: 98%;
+  height: 98%;
+  top: 4px;
+  left: 3px;
+}
+body main .top-ten-movies .top-movie-list .top-movie .thumbnail:hover .top-movie-img img {
+  opacity: 0.8;
+}
+body main .top-ten-movies .top-movie-list .top-movie .thumbnail:hover .top-movie-layer {
+  opacity: 1;
+}
+body main .top-ten-movies .top-movie-list .top-movie .thumbnail .top-movie-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  object-fit: cover;
+  z-index: 5;
+  transition: all 0.1s ease;
+  -webkit-clip-path: polygon(94.239% 100%, 5.761% 100%, 5.761% 100%, 4.826% 99.95%, 3.94% 99.803%, 3.113% 99.569%, 2.358% 99.256%, 1.687% 98.87%, 1.111% 98.421%, 0.643% 97.915%, 0.294% 97.362%, 0.075% 96.768%, 0 96.142%, 0 3.858%, 0 3.858%, 0.087% 3.185%, 0.338% 2.552%, 0.737% 1.968%, 1.269% 1.442%, 1.92% 0.984%, 2.672% 0.602%, 3.512% 0.306%, 4.423% 0.105%, 5.391% 0.008%, 6.4% 0.024%, 94.879% 6.625%, 94.879% 6.625%, 95.731% 6.732%, 96.532% 6.919%, 97.272% 7.178%, 97.942% 7.503%, 98.533% 7.887%, 99.038% 8.323%, 99.445% 8.805%, 99.747% 9.326%, 99.935% 9.88%, 100% 10.459%, 100% 96.142%, 100% 96.142%, 99.925% 96.768%, 99.706% 97.362%, 99.357% 97.915%, 98.889% 98.421%, 98.313% 98.87%, 97.642% 99.256%, 96.887% 99.569%, 96.06% 99.803%, 95.174% 99.95%, 94.239% 116%);
+  clip-path: polygon(94.239% 100%, 5.761% 100%, 5.761% 100%, 4.826% 99.95%, 3.94% 99.803%, 3.113% 99.569%, 2.358% 99.256%, 1.687% 98.87%, 1.111% 98.421%, 0.643% 97.915%, 0.294% 97.362%, 0.075% 96.768%, 0 96.142%, 0 3.858%, 0 3.858%, 0.087% 3.185%, 0.338% 2.552%, 0.737% 1.968%, 1.269% 1.442%, 1.92% 0.984%, 2.672% 0.602%, 3.512% 0.306%, 4.423% 0.105%, 5.391% 0.008%, 6.4% 0.024%, 94.879% 6.625%, 94.879% 6.625%, 95.731% 6.732%, 96.532% 6.919%, 97.272% 7.178%, 97.942% 7.503%, 98.533% 7.887%, 99.038% 8.323%, 99.445% 8.805%, 99.747% 9.326%, 99.935% 9.88%, 100% 10.459%, 100% 96.142%, 100% 96.142%, 99.925% 96.768%, 99.706% 97.362%, 99.357% 97.915%, 98.889% 98.421%, 98.313% 98.87%, 97.642% 99.256%, 96.887% 99.569%, 96.06% 99.803%, 95.174% 99.95%, 94.239% 100%);
+}
+body main .top-ten-movies .top-movie-list .top-movie .thumbnail .top-movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.1s ease;
+}
+body main .top-ten-movies .top-movie-list .top-movie .thumbnail .top-movie-layer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  clip-path: polygon(94.239% 100%, 5.761% 100%, 5.761% 100%, 4.826% 99.95%, 3.94% 99.803%, 3.113% 99.569%, 2.358% 99.256%, 1.687% 98.87%, 1.111% 98.421%, 0.643% 97.915%, 0.294% 97.362%, 0.075% 96.768%, 0 96.142%, 0 3.858%, 0 3.858%, 0.087% 3.185%, 0.338% 2.552%, 0.737% 1.968%, 1.269% 1.442%, 1.92% 0.984%, 2.672% 0.602%, 3.512% 0.306%, 4.423% 0.105%, 5.391% 0.008%, 6.4% 0.024%, 94.879% 6.625%, 94.879% 6.625%, 95.731% 6.732%, 96.532% 6.919%, 97.272% 7.178%, 97.942% 7.503%, 98.533% 7.887%, 99.038% 8.323%, 99.445% 8.805%, 99.747% 9.326%, 99.935% 9.88%, 100% 10.459%, 100% 96.142%, 100% 96.142%, 99.925% 96.768%, 99.706% 97.362%, 99.357% 97.915%, 98.889% 98.421%, 98.313% 98.87%, 97.642% 99.256%, 96.887% 99.569%, 96.06% 99.803%, 95.174% 99.95%, 94.239% 116%);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #FFD875;
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  color: white;
+  display: flex;
+}
+body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .top-number {
+  font-size: 58.8px;
+  font-weight: 700;
+  background: linear-gradient(39deg, rgb(254, 207, 89), rgb(255, 241, 204));
+  flex-shrink: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #ccc;
+}
+body main .miss-old-disney {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #191B24;
+}
+body main .miss-old-disney .old-disney-movies {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 1rem;
+}
+body main .miss-old-disney .old-disney-movies .disney-movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .dis-movie-img {
+  max-width: 183px;
+  max-height: 274px;
+}
+body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .dis-movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+body main .cartoon-movies-for-adult {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #191B24;
+}
+body main .cartoon-movies-for-adult .list-cartoon-movies {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 1rem;
+}
+body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie-img {
+  max-width: 190px;
+  max-height: 285px;
+}
+body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
