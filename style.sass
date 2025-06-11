@@ -5,103 +5,219 @@ $primary: #191B24
 
 body
     header
-        background-color: #333
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background-color: #0F111A
         width: 100%
-        overflow: hidden
-
-        .header-container
-            padding: 0 20px
-            height: 70px
+        padding: 10px 20px
+        gap: 1.5rem
+        .logo
+            width: 150px
+            flex-shrink: 0
+            img
+                width: 100%
+        .search-bar
+            flex: 1 1 auto
+            position: relative
+            max-width: 368px
+            height: 44.8px
+            input
+                width: 100%
+                height: 100%
+                background-color: #ffffff14
+                border: 0 solid
+                border-radius: 5px
+        .nav-menu
             display: flex
-            flex-wrap: nowrap
-            align-items: center
-            justify-content: space-between
-            overflow: hidden
-
-            .wrapper-logo
-                max-width: 134px
-                max-height: 40px
-                flex-shrink: 0
-                overflow: hidden
-
-                img
-                    width: 100%
-                    height: 100%
-                    object-fit: cover
-
-            .input-container
+            gap: .5rem
+            a
+                text-decoration: none
+                color: white
+                font-size: 13px
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                padding: 0 8px
+        .user-actions
+            display: flex
+            padding: 0 20px
+            .account
                 display: flex
-                max-width: 300px
-                flex-grow: 1
-                overflow: hidden
-
-                input
-                    width: 100%
-                    height: 36px
-                    line-height: 36px
-                    padding: 0 1rem
-                    background-color: rgba(255, 255, 255, 0.281)
-                    color: #fff
-                    font-size: 1em
-                    border-radius: 0.4rem
-                    border: 1px solid black
-
-            .header-elements-container
+                flex-direction: column
+                border-right: 1px solid white
+                padding: 0 20px
+                a
+                    font-size: 14px
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            .member
                 display: flex
                 align-items: center
-                gap: 10px
-                overflow: hidden
-                flex-shrink: 1
-
-                .header-elements
-                    display: flex
-                    justify-content: space-between
-                    list-style: none
-                    padding: 0
-                    margin: 0
-                    overflow: hidden
-
-                .list-elements
-                    padding: 0 8px
-                    white-space: nowrap
-
-                    a
-                        text-decoration: none
-                        color: white
-
-                .download-app
-                    display: flex
-                    flex-direction: column
-                    list-style: none
-                    padding: 0
-                    margin: 0
-                    flex-shrink: 1
-                    overflow: hidden
-
-                    p
-                        color: white
-                        margin: 0
-
-                .member-button
-                    flex-shrink: 1
-                    overflow: hidden
-                    button
-                        display: flex
-                        align-items: center
-                        gap: 6px
-                        background-color: white
-                        border: none
-                        border-radius: 25px
-                        padding: 10px 18px
-                        font-size: 14px
-                        font-weight: bolder
-                        color: black
-                        cursor: pointer
-                        overflow: hidden
-
+                border: 1px solid white
+                border-radius: 13px
+                width: 125px
+                height: 40.58px
+                justify-content: center
+                background-color: white
+                a
+                    font-size: 14px
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                    font-weight: bolder
+                    color: #333
     main
         width: 100%
         overflow: hidden
+        .main-banner
+            width: 100%
+            height: 660px
+            position: relative
+            .movie-poster-container
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                .movie-poster
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    top: 0
+                    left: 0
+                    z-index: 1
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                .movie-content
+                    display: flex
+                    flex-direction: column
+                    max-width: 600px
+                    padding: 0 30px 60px
+                    justify-content: space-between
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    z-index: 3
+                .background-effect
+                    width: 100%
+                    height: 100%
+                    background: linear-gradient(to right, #535D8E 25%, transparent 90%)
+                    opacity: 0.5
+                    position: absolute
+                    top: 0
+                    left: 0
+                    z-index: 2
+                    .movie-title-img
+                        max-width: 500px
+                        max-height: 130px
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                .banner-movie-title
+                    font-size: 1.1em
+                    line-height: 1.5
+                    font-weight: 300
+                    margin-bottom: 1rem
+                    a
+                        color: #ffd875
+                        font-size: 15.4px
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                .tag-slide-content
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+                    flex-wrap: wrap
+                    gap: .6rem
+                    margin-bottom: .75rem
+                    .tag-imdb
+                        background-color: transparent
+                        border: 1px solid #f0d25c
+                        border-radius: .33rem
+                        color: #fff
+                        font-weight: 500
+                        cursor: default
+                        line-height: 24px
+                        font-size: 12px
+                        padding: 0 .4rem
+                        flex-shrink: 0
+                        display: inline-flex
+                        align-items: center
+                    .tag-quality
+                        padding: 0 .4rem
+                        border-radius: .33rem
+                        height: 26px
+                        font-size: 12px
+                        font-weight: 700
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        color: #000
+                        background-color: #FFD875
+                        background-image: linear-gradient(220deg, #FFD875, #FFF)
+                    .tag-model
+                        background-color: #fff
+                        color: #000
+                        font-weight: 500
+                        display: flex
+                        overflow: hidden
+                        cursor: default
+                        line-height: 26px
+                        padding: 0 .5rem
+                        flex-shrink: 0
+                        border-radius: .33rem
+                        align-items: center
+                        font-size: 12px
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                    .tag-classic
+                        background-color: #ffffff10
+                        height: 26px
+                        padding: 0.4rem
+                        color: #fff
+                        display: inline-flex
+                        border: 1px solid #fff
+                        border-radius: .33rem
+                        align-items: center
+                        font-size: 12px
+                .movie-topics
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+                    flex-wrap: wrap
+                    gap: .6rem
+                    margin-bottom: .75rem
+                    .tag-topic
+                        background-color: #ffffff10
+                        height: 26px
+                        padding: 0 .4rem
+                        color: #fff
+                        display: inline-flex
+                        border-radius: .33rem
+                        align-items: center
+                        font-size: 12px
+                .movie-describe
+                    font-size: 1em
+                    line-height: 1.6
+                    color: #fff
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, .2)
+                    font-weight: 400
+                    margin-bottom: 2rem
+                    font-size: 14px
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+            .right-side
+                display: flex
+                position: absolute
+                right: 0
+                padding: 0 30px 60px
+                bottom: 0
+                z-index: 3
+                .right-side-movie
+                    max-width: 63.49px
+                    max-height: 38.95px
+                    margin-right: 5px
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: fill
+                        border-radius: 10px
 
         .genre-suggestions
             width: 100%
@@ -138,6 +254,7 @@ body
                         flex-direction: column
                         align-items: flex-start
                         justify-content: flex-end
+                        gap: .7rem
                         .topic-title
                             @extend common-topic-title
                         .topic-detail
@@ -153,6 +270,7 @@ body
                         flex-direction: column
                         align-items: flex-start
                         justify-content: flex-end
+                        gap: .7rem
                         .topic-title
                             @extend common-topic-title
                         .topic-detail
@@ -168,6 +286,7 @@ body
                         flex-direction: column
                         align-items: flex-start
                         justify-content: flex-end
+                        gap: .7rem
                         .topic-title
                             @extend common-topic-title
                         .topic-detail
@@ -183,6 +302,7 @@ body
                         flex-direction: column
                         align-items: flex-start
                         justify-content: flex-end
+                        gap: .7rem
                         .topic-title
                             @extend common-topic-title
                         .topic-detail
@@ -198,6 +318,7 @@ body
                         flex-direction: column
                         align-items: flex-start
                         justify-content: flex-end
+                        gap: .7rem
                         .topic-title
                             @extend common-topic-title
                         .topic-detail
@@ -213,6 +334,7 @@ body
                         flex-direction: column
                         align-items: flex-start
                         justify-content: flex-end
+                        gap: .7rem
                         .topic-title
                             @extend common-topic-title
                         .topic-detail
@@ -292,6 +414,7 @@ body
                                 object-fit: cover
                                 border-radius: 10px
                         p
+                            padding: 12px 16px
                             font-size: 14px
                             color: #ffffff
                             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -427,14 +550,30 @@ body
                         text-align: center
                         justify-content: space-between
                         padding: 0 20px
+                        gap: .75rem
                         .dis-movie-img
                             max-width: 183px
                             max-height: 274px
+                            width: 100%
+                            padding-bottom: 150%
+                            height: 0
+                            position: relative
+                            border-radius: .5rem
+                            overflow: hidden
+                            background-color: #2F3346
+                            transition: all 0.1s ease
+                            &:hover
+                                opacity: 0.8
                             img
+                                position: absolute
                                 width: 100%
                                 height: 100%
+                                top: 0
+                                left: 0
+                                right: 0
+                                bottom: 0
                                 object-fit: cover
-                                border-radius: 10px
+                                opacity: 1
                         .title
                             @extend common-title
                         .sub-title
@@ -456,23 +595,243 @@ body
                         @extend common-categories-title
                 .cartoon-for-adult-movie-container
                     display: grid
-                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
                     gap: 1rem
                     .cartoon-for-adult-movie-list
-                        display: flex
-                        flex-direction: column
-                        text-align: center
-                        justify-content: space-between
-                        padding: 0 20px
+                        .cartoon-movie
+                            display: flex
+                            flex-direction: column
+                            text-align: center
+                            justify-content: space-between
+                            padding: 0 20px
+                            gap: .75rem
                         .cartoon-movie-img
-                            max-width: 190px
-                            max-height: 285px
+                            max-width: 275.5px
+                            max-height: 311.25px
+                            width: 100%
+                            padding-bottom: 150%
+                            height: 0
+                            position: relative
+                            border-radius: .5rem
+                            overflow: hidden
+                            background-color: #2F3346
+                            transition: all 0.1s ease
+                            &:hover
+                                opacity: 0.8
                             img
+                                position: absolute
                                 width: 100%
                                 height: 100%
+                                top: 0
+                                left: 0
+                                right: 0
+                                bottom: 0
                                 object-fit: cover
-                                border-radius: 10px
+                                opacity: 1
                         .title
                             @extend common-title
                         .sub-title
                             @extend common-sub-title
+        .newest-anime
+            width: 100%
+            padding: 0 20px
+            display: flex
+            flex-direction: column
+            gap: 1rem
+            background-color: $primary
+
+            .newest-anime-banner
+                padding: 20px
+                gap: 1rem
+                .list-cartoon-movies-title
+                    h2
+                        @extend common-categories-title
+                .newest-anime-container
+                    position: relative
+                    width: 100%
+                    height: 460px
+                    .newest-anime-background-effect
+                        width: 100%
+                        height: 100%
+                        background: linear-gradient(to right, #535D8E 20%, transparent 90%)
+                        opacity: 0.5
+                        border-radius: 20px 0 0 20px
+                        position: absolute
+                        top: 0
+                        left: 0
+                        z-index: 2
+                    .newest-anime-background-wrapper
+                        width: 70%
+                        height: 100%
+                        position: absolute
+                        bottom: 0
+                        right: 0
+                        z-index: 1
+                        img
+                            width: 100%
+                            height: 100%
+                            border-radius: 0 20px 20px 0
+                            object-fit: cover
+                    .movie-content
+                        display: flex
+                        flex-direction: column
+                        max-width: 600px
+                        padding: 0 30px 60px
+                        justify-content: space-between
+                        position: absolute
+                        bottom: 0
+                        left: 0
+                        z-index: 3
+                        .movie-title
+                            font-size: 25.2px
+                            font-weight: 700
+                            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                        .banner-movie-title
+                            font-size: 1.1em
+                            line-height: 1.5
+                            font-weight: 300
+                            margin-bottom: 1rem
+                            a
+                                color: #ffd875
+                                font-size: 15.4px
+                                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                        .tag-slide-content
+                            display: flex
+                            align-items: center
+                            justify-content: flex-start
+                            flex-wrap: wrap
+                            gap: .6rem
+                            margin-bottom: .75rem
+                            .tag-imdb
+                                background-color: transparent
+                                border: 1px solid #f0d25c
+                                border-radius: .33rem
+                                color: #fff
+                                font-weight: 500
+                                cursor: default
+                                line-height: 24px
+                                font-size: 12px
+                                padding: 0 .4rem
+                                flex-shrink: 0
+                                display: inline-flex
+                                align-items: center
+                            .tag-quality
+                                padding: 0 .4rem
+                                border-radius: .33rem
+                                height: 26px
+                                font-size: 12px
+                                font-weight: 700
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                color: #000
+                                background-color: #FFD875
+                                background-image: linear-gradient(220deg, #FFD875, #FFF)
+                            .tag-model
+                                background-color: #fff
+                                color: #000
+                                font-weight: 500
+                                display: flex
+                                overflow: hidden
+                                cursor: default
+                                line-height: 26px
+                                padding: 0 .5rem
+                                flex-shrink: 0
+                                border-radius: .33rem
+                                align-items: center
+                                font-size: 12px
+                                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                            .tag-classic
+                                background-color: #ffffff10
+                                height: 26px
+                                padding: 0.4rem
+                                color: #fff
+                                display: inline-flex
+                                border: 1px solid #fff
+                                border-radius: .33rem
+                                align-items: center
+                                font-size: 12px
+                        .movie-topics
+                            display: flex
+                            align-items: center
+                            justify-content: flex-start
+                            flex-wrap: wrap
+                            gap: .6rem
+                            margin-bottom: .75rem
+                            .tag-topic
+                                background-color: #ffffff10
+                                height: 26px
+                                padding: 0 .4rem
+                                color: #fff
+                                display: inline-flex
+                                border-radius: .33rem
+                                align-items: center
+                                font-size: 12px
+                        .movie-describe
+                            font-size: 1em
+                            line-height: 1.6
+                            color: #fff
+                            text-shadow: 0 1px 1px rgba(0, 0, 0, .2)
+                            font-weight: 400
+                            margin-bottom: 2rem
+                            font-size: 14px
+                            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                .another-movie-side
+                    display: flex
+                    align-items: stretch
+                    justify-content: center
+                    gap: 1rem
+                    position: absolute
+                    bottom: -40px
+                    left: 50%
+                    transform: translateX(-50%)
+                    z-index: 4
+                    .another-movie
+                        width: 59.06px
+                        height: 88.59px
+                        border-radius: 10px
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                            border-radius: 10px
+                            border: 2px solid #282B3A
+
+        .user-reaction
+            width: 100%
+            padding: 0 20px
+            display: flex
+            gap: 1rem
+            background-color: $primary
+            .top-comment
+                padding: 20px
+                gap: 1rem
+                border: 1px solid #fff2
+                border-radius: 30px
+                .comment-container
+                    display: flex
+                    flex-direction: column
+                    padding: 1.5rem 2rem
+                    .comment-title
+                        font-size: 14px
+                        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+                        font-weight: 500
+                        margin-bottom: 20px
+                    .users-comment
+                        display: grid
+                        grid-template-columns: repeat(6,1fr)
+                        gap: 1rem
+                        .list-comment
+                            width: 302.75px
+                            height: 228.51px
+                            position: relative
+                            .comment-detail
+                                width: 100%
+                                height: 100%
+                                position: absolute
+                                top: 0
+                                left: 0
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: cover

@@ -1,25 +1,44 @@
-body {
+@charset "UTF-8";
+/* RESET CƠ BẢN */
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
-p {
-  margin: 0;
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #0F111A;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
 }
 
 common-title, body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe .title, body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .title, body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .title, .list-new-movie .new-movies .new-movie-list .new-movie .title {
   font-size: 14px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
+  font-weight: 700;
 }
 
 common-sub-title, body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe .sub-title, body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .sub-title, body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .sub-title, .list-new-movie .new-movies .new-movie-list .new-movie .sub-title {
   font-size: 14px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #AAAAAA;
+  font-weight: 500;
 }
 
 common-see-more, body main .content .categories .category-title .see-more {
@@ -29,7 +48,7 @@ common-see-more, body main .content .categories .category-title .see-more {
   text-decoration: none;
 }
 
-common-categories-title, body main .genre-suggestions h2, body main .top-ten-movies .top-movies-title h2, body main .miss-old-disney .old-disney-movies .disney-movies-title h2, body main .cartoon-movies-for-adult .list-cartoon-movies .list-cartoon-movies-title h2 {
+common-categories-title, body main .genre-suggestions h2, body main .top-ten-movies .top-movies-title h2, body main .miss-old-disney .old-disney-movies .disney-movies-title h2, body main .cartoon-movies-for-adult .list-cartoon-movies .list-cartoon-movies-title h2, body main .newest-anime .newest-anime-banner .list-cartoon-movies-title h2 {
   font-size: 25.2px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
@@ -41,14 +60,14 @@ common-categories-title, body main .genre-suggestions h2, body main .top-ten-mov
 common-topic-title, body main .genre-suggestions .list-genres .genre1 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre2 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre3 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre4 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre5 .genre-detail .topic-title, body main .genre-suggestions .list-genres .genre6 .genre-detail .topic-title, body main .genre-suggestions .list-genres .other-genre .genre-detail .topic-title {
   font-size: 22.4px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bolder;
+  font-weight: 700;
   color: white;
 }
 
 common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre2 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre3 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre4 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre5 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .genre6 .genre-detail .topic-detail, body main .genre-suggestions .list-genres .other-genre .genre-detail .topic-detail {
   font-size: 14px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bolder;
+  font-weight: 500;
   color: white;
 }
 
@@ -83,16 +102,33 @@ common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-de
   text-align: center;
   justify-content: space-between;
   padding: 0 20px;
+  gap: 0.75rem;
 }
 .list-new-movie .new-movies .new-movie-list .new-movie .new-movie-img {
   max-width: 183px;
   max-height: 274px;
+  width: 100%;
+  padding-bottom: 150%;
+  height: 0;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #2F3346;
+  transition: all 0.1s ease;
+}
+.list-new-movie .new-movies .new-movie-list .new-movie .new-movie-img:hover {
+  opacity: 0.8;
 }
 .list-new-movie .new-movies .new-movie-list .new-movie .new-movie-img img {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   object-fit: cover;
-  border-radius: 10px;
+  opacity: 1;
 }
 .list-new-movie .new-movies .new-movie-list .new-movie p {
   font-size: 14px;
@@ -100,104 +136,252 @@ common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-de
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body header {
-  background-color: #333;
-  width: 100%;
-  overflow: hidden;
-}
-body header .header-container {
-  padding: 0 20px;
-  height: 70px;
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+  background-color: #0F111A;
+  width: 100%;
+  padding: 10px 20px;
+  gap: 1.5rem;
 }
-body header .header-container .wrapper-logo {
-  max-width: 134px;
-  max-height: 40px;
+body header .logo {
+  width: 150px;
   flex-shrink: 0;
-  overflow: hidden;
 }
-body header .header-container .wrapper-logo img {
+body header .logo img {
+  width: 100%;
+}
+body header .search-bar {
+  flex: 1 1 auto;
+  position: relative;
+  max-width: 368px;
+  height: 44.8px;
+}
+body header .search-bar input {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.0784313725);
+  border: 0 solid;
+  border-radius: 5px;
 }
-body header .header-container .input-container {
+body header .nav-menu {
   display: flex;
-  max-width: 300px;
-  flex-grow: 1;
-  overflow: hidden;
+  gap: 0.5rem;
 }
-body header .header-container .input-container input {
-  width: 100%;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 1rem;
-  background-color: rgba(255, 255, 255, 0.281);
-  color: #fff;
-  font-size: 1em;
-  border-radius: 0.4rem;
-  border: 1px solid black;
-}
-body header .header-container .header-elements-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  overflow: hidden;
-  flex-shrink: 1;
-}
-body header .header-container .header-elements-container .header-elements {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-}
-body header .header-container .header-elements-container .list-elements {
-  padding: 0 8px;
-  white-space: nowrap;
-}
-body header .header-container .header-elements-container .list-elements a {
+body header .nav-menu a {
   text-decoration: none;
   color: white;
+  font-size: 13px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0 8px;
 }
-body header .header-container .header-elements-container .download-app {
+body header .user-actions {
+  display: flex;
+  padding: 0 20px;
+}
+body header .user-actions .account {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-shrink: 1;
-  overflow: hidden;
+  border-right: 1px solid white;
+  padding: 0 20px;
 }
-body header .header-container .header-elements-container .download-app p {
-  color: white;
-  margin: 0;
+body header .user-actions .account a {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-body header .header-container .header-elements-container .member-button {
-  flex-shrink: 1;
-  overflow: hidden;
-}
-body header .header-container .header-elements-container .member-button button {
+body header .user-actions .member {
   display: flex;
   align-items: center;
-  gap: 6px;
+  border: 1px solid white;
+  border-radius: 13px;
+  width: 125px;
+  height: 40.58px;
+  justify-content: center;
   background-color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 18px;
+}
+body header .user-actions .member a {
   font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bolder;
-  color: black;
-  cursor: pointer;
-  overflow: hidden;
+  color: #333;
 }
 body main {
   width: 100%;
   overflow: hidden;
+}
+body main .main-banner {
+  width: 100%;
+  height: 660px;
+  position: relative;
+}
+body main .main-banner .movie-poster-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body main .main-banner .movie-poster-container .movie-poster {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+body main .main-banner .movie-poster-container .movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .main-banner .movie-poster-container .movie-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 0 30px 60px;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+body main .main-banner .movie-poster-container .background-effect {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #535D8E 25%, transparent 90%);
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+body main .main-banner .movie-poster-container .background-effect .movie-title-img {
+  max-width: 500px;
+  max-height: 130px;
+}
+body main .main-banner .movie-poster-container .background-effect .movie-title-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .main-banner .movie-poster-container .banner-movie-title {
+  font-size: 1.1em;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+body main .main-banner .movie-poster-container .banner-movie-title a {
+  color: #ffd875;
+  font-size: 15.4px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .main-banner .movie-poster-container .tag-slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+body main .main-banner .movie-poster-container .tag-slide-content .tag-imdb {
+  background-color: transparent;
+  border: 1px solid #f0d25c;
+  border-radius: 0.33rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: default;
+  line-height: 24px;
+  font-size: 12px;
+  padding: 0 0.4rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+body main .main-banner .movie-poster-container .tag-slide-content .tag-quality {
+  padding: 0 0.4rem;
+  border-radius: 0.33rem;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: #FFD875;
+  background-image: linear-gradient(220deg, #FFD875, #FFF);
+}
+body main .main-banner .movie-poster-container .tag-slide-content .tag-model {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  overflow: hidden;
+  cursor: default;
+  line-height: 26px;
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.33rem;
+  align-items: center;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .main-banner .movie-poster-container .tag-slide-content .tag-classic {
+  background-color: rgba(255, 255, 255, 0.062745098);
+  height: 26px;
+  padding: 0.4rem;
+  color: #fff;
+  display: inline-flex;
+  border: 1px solid #fff;
+  border-radius: 0.33rem;
+  align-items: center;
+  font-size: 12px;
+}
+body main .main-banner .movie-poster-container .movie-topics {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+body main .main-banner .movie-poster-container .movie-topics .tag-topic {
+  background-color: rgba(255, 255, 255, 0.062745098);
+  height: 26px;
+  padding: 0 0.4rem;
+  color: #fff;
+  display: inline-flex;
+  border-radius: 0.33rem;
+  align-items: center;
+  font-size: 12px;
+}
+body main .main-banner .movie-poster-container .movie-describe {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .main-banner .right-side {
+  display: flex;
+  position: absolute;
+  right: 0;
+  padding: 0 30px 60px;
+  bottom: 0;
+  z-index: 3;
+}
+body main .main-banner .right-side .right-side-movie {
+  max-width: 63.49px;
+  max-height: 38.95px;
+  margin-right: 5px;
+}
+body main .main-banner .right-side .right-side-movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
 }
 body main .genre-suggestions {
   width: 100%;
@@ -233,6 +417,7 @@ body main .genre-suggestions .list-genres .genre1 .genre-detail {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  gap: 0.7rem;
 }
 body main .genre-suggestions .list-genres .genre2 {
   background-color: #757575;
@@ -245,6 +430,7 @@ body main .genre-suggestions .list-genres .genre2 .genre-detail {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  gap: 0.7rem;
 }
 body main .genre-suggestions .list-genres .genre3 {
   background-color: #20c997;
@@ -257,6 +443,7 @@ body main .genre-suggestions .list-genres .genre3 .genre-detail {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  gap: 0.7rem;
 }
 body main .genre-suggestions .list-genres .genre4 {
   background-color: #6f42c1;
@@ -269,6 +456,7 @@ body main .genre-suggestions .list-genres .genre4 .genre-detail {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  gap: 0.7rem;
 }
 body main .genre-suggestions .list-genres .genre5 {
   background-color: #d63384;
@@ -281,6 +469,7 @@ body main .genre-suggestions .list-genres .genre5 .genre-detail {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  gap: 0.7rem;
 }
 body main .genre-suggestions .list-genres .genre6 {
   background-color: #dc3545;
@@ -293,6 +482,7 @@ body main .genre-suggestions .list-genres .genre6 .genre-detail {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  gap: 0.7rem;
 }
 body main .genre-suggestions .list-genres .other-genre {
   background-color: #6c757d;
@@ -367,6 +557,7 @@ body main .content .categories .movie-list .movie .movie-img-container img {
   border-radius: 10px;
 }
 body main .content .categories .movie-list .movie p {
+  padding: 12px 16px;
   font-size: 14px;
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -507,16 +698,33 @@ body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie {
   text-align: center;
   justify-content: space-between;
   padding: 0 20px;
+  gap: 0.75rem;
 }
 body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .dis-movie-img {
   max-width: 183px;
   max-height: 274px;
+  width: 100%;
+  padding-bottom: 150%;
+  height: 0;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #2F3346;
+  transition: all 0.1s ease;
+}
+body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .dis-movie-img:hover {
+  opacity: 0.8;
 }
 body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .dis-movie-img img {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   object-fit: cover;
-  border-radius: 10px;
+  opacity: 1;
 }
 body main .cartoon-movies-for-adult {
   width: 100%;
@@ -534,25 +742,269 @@ body main .cartoon-movies-for-adult .list-cartoon-movies {
 }
 body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
-body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list {
+body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie {
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
   padding: 0 20px;
+  gap: 0.75rem;
 }
 body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie-img {
-  max-width: 190px;
-  max-height: 285px;
+  max-width: 275.5px;
+  max-height: 311.25px;
+  width: 100%;
+  padding-bottom: 150%;
+  height: 0;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #2F3346;
+  transition: all 0.1s ease;
+}
+body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie-img:hover {
+  opacity: 0.8;
 }
 body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  opacity: 1;
+}
+body main .newest-anime {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #191B24;
+}
+body main .newest-anime .newest-anime-banner {
+  padding: 20px;
+  gap: 1rem;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container {
+  position: relative;
+  width: 100%;
+  height: 460px;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .newest-anime-background-effect {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #535D8E 20%, transparent 90%);
+  opacity: 0.5;
+  border-radius: 20px 0 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .newest-anime-background-wrapper {
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .newest-anime-background-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  object-fit: cover;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 0 30px 60px;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .movie-title {
+  font-size: 25.2px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .banner-movie-title {
+  font-size: 1.1em;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .banner-movie-title a {
+  color: #ffd875;
+  font-size: 15.4px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .tag-slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .tag-slide-content .tag-imdb {
+  background-color: transparent;
+  border: 1px solid #f0d25c;
+  border-radius: 0.33rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: default;
+  line-height: 24px;
+  font-size: 12px;
+  padding: 0 0.4rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .tag-slide-content .tag-quality {
+  padding: 0 0.4rem;
+  border-radius: 0.33rem;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: #FFD875;
+  background-image: linear-gradient(220deg, #FFD875, #FFF);
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .tag-slide-content .tag-model {
+  background-color: #fff;
+  color: #000;
+  font-weight: 500;
+  display: flex;
+  overflow: hidden;
+  cursor: default;
+  line-height: 26px;
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+  border-radius: 0.33rem;
+  align-items: center;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .tag-slide-content .tag-classic {
+  background-color: rgba(255, 255, 255, 0.062745098);
+  height: 26px;
+  padding: 0.4rem;
+  color: #fff;
+  display: inline-flex;
+  border: 1px solid #fff;
+  border-radius: 0.33rem;
+  align-items: center;
+  font-size: 12px;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .movie-topics {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .movie-topics .tag-topic {
+  background-color: rgba(255, 255, 255, 0.062745098);
+  height: 26px;
+  padding: 0 0.4rem;
+  color: #fff;
+  display: inline-flex;
+  border-radius: 0.33rem;
+  align-items: center;
+  font-size: 12px;
+}
+body main .newest-anime .newest-anime-banner .newest-anime-container .movie-content .movie-describe {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .newest-anime .newest-anime-banner .another-movie-side {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+}
+body main .newest-anime .newest-anime-banner .another-movie-side .another-movie {
+  width: 59.06px;
+  height: 88.59px;
+  border-radius: 10px;
+}
+body main .newest-anime .newest-anime-banner .another-movie-side .another-movie img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  border: 2px solid #282B3A;
+}
+body main .user-reaction {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  gap: 1rem;
+  background-color: #191B24;
+}
+body main .user-reaction .top-comment {
+  padding: 20px;
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1333333333);
+  border-radius: 30px;
+}
+body main .user-reaction .top-comment .comment-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+}
+body main .user-reaction .top-comment .comment-container .comment-title {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+body main .user-reaction .top-comment .comment-container .users-comment {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment {
+  width: 302.75px;
+  height: 228.51px;
+  position: relative;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .comment-detail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .comment-detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=index.css.map */
