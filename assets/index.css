@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/* RESET CƠ BẢN */
 * {
   margin: 0;
   padding: 0;
@@ -968,12 +966,14 @@ body main .user-reaction {
   background-color: #191B24;
 }
 body main .user-reaction .top-comment {
+  width: 100%;
   padding: 20px;
-  gap: 1rem;
+  gap: 4rem;
   border: 1px solid rgba(255, 255, 255, 0.1333333333);
   border-radius: 30px;
 }
 body main .user-reaction .top-comment .comment-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2rem;
@@ -985,26 +985,77 @@ body main .user-reaction .top-comment .comment-container .comment-title {
   margin-bottom: 20px;
 }
 body main .user-reaction .top-comment .comment-container .users-comment {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
 }
 body main .user-reaction .top-comment .comment-container .users-comment .list-comment {
-  width: 302.75px;
-  height: 228.51px;
+  width: 100%;
+  aspect-ratio: 4/3;
   position: relative;
+  border-radius: 10px;
 }
 body main .user-reaction .top-comment .comment-container .users-comment .list-comment .comment-detail {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   position: absolute;
   top: 0;
   left: 0;
+  filter: blur(5px);
+  mask-image: linear-gradient(180deg, black 0, transparent 80%);
+  overflow: hidden;
 }
 body main .user-reaction .top-comment .comment-container .users-comment .list-comment .comment-detail img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .user-comment-content {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  z-index: 2;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  width: calc(100% - 20px);
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .user-comment-content .avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .user-comment-content .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .user-comment-content .user-name {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 0.3rem;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .user-comment-content .movie-comment {
+  font-size: 12px;
+  line-height: 1.4;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .movie-img {
+  width: 50px;
+  height: 57px;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
