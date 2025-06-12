@@ -144,7 +144,7 @@ common-user-comment-parapraph, body main .user-reaction .top-comment .irt-table 
     padding: 0 !important;
   }
   .new-movies .new-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 0 0 !important;
   }
   .new-movies .new-movie-list {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -158,10 +158,10 @@ common-user-comment-parapraph, body main .user-reaction .top-comment .irt-table 
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   .new-movies {
-    padding: 20px 0 !important;
+    padding: 0 !important;
   }
   .new-movies .new-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 0 0 !important;
   }
   .new-movies .new-movie-list .new-movie {
     padding: 0 !important;
@@ -630,7 +630,7 @@ body main .genre-suggestions .genre-suggestions .list-genres {
 }
 @media (max-width: 767px) {
   body main .genre-suggestions h2 {
-    padding: 20px 0 !important;
+    padding: 0 !important;
   }
   body main .genre-suggestions .list-genres {
     display: grid;
@@ -647,7 +647,7 @@ body main .genre-suggestions .genre-suggestions .list-genres {
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   body main .genre-suggestions h2 {
-    padding: 20px 0 !important;
+    padding: 0 !important;
   }
   body main .list-genres {
     padding: 20px 0 !important;
@@ -687,12 +687,14 @@ body main .content .categories .category-title h2 {
 body main .content .categories .movie-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 10px;
 }
 body main .content .categories .movie-list .movie {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
 }
 body main .content .categories .movie-list .movie .movie-img-container {
   max-width: 360px;
@@ -862,7 +864,7 @@ body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   body main .top-ten-movies .top-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 10px 0 !important;
   }
   body main .top-ten-movies .top-movie-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -870,7 +872,7 @@ body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-
 }
 @media (max-width: 767px) {
   body main .top-ten-movies .top-movies .top-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 10px 0 !important;
   }
   body main .top-ten-movies .top-movie-list {
     display: grid;
@@ -959,7 +961,7 @@ body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .
     padding: 20px 0 !important;
   }
   body main .miss-old-disney .old-disney-movies .disney-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 0 0 !important;
   }
   body main .miss-old-disney .old-disney-movies .disney-movie-list {
     grid-template-columns: repeat(4, 1fr);
@@ -971,9 +973,10 @@ body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .
 @media (max-width: 767px) {
   body main .miss-old-disney .old-disney-movies {
     padding: 0 !important;
+    gap: 0;
   }
   body main .miss-old-disney .old-disney-movies .disney-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 10px 0 !important;
   }
   body main .miss-old-disney .disney-movie-list {
     display: grid;
@@ -1042,10 +1045,11 @@ body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movi
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   body main .cartoon-movies-for-adult .list-cartoon-movies {
-    padding: 20px 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
   }
   body main .cartoon-movies-for-adult .list-cartoon-movies .list-cartoon-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 0 0 !important;
   }
   body main .cartoon-movies-for-adult .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie {
     padding: 20px 0 !important;
@@ -1054,10 +1058,11 @@ body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movi
 }
 @media (max-width: 767px) {
   body main .cartoon-movies-for-adult .list-cartoon-movies {
-    padding: 20px 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
   }
   body main .cartoon-movies-for-adult .list-cartoon-movies .list-cartoon-movies-title h2 {
-    padding: 20px 0 !important;
+    padding: 20px 0 10px 0 !important;
   }
   body main .cartoon-movies-for-adult .cartoon-for-adult-movie-container {
     grid-template-columns: repeat(2, 1fr) !important;
