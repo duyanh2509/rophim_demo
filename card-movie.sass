@@ -64,6 +64,9 @@
 @media (max-width: 767px)
     .new-movies
         padding: 0 !important
+        .new-movies-title
+            h2
+                padding: 20px 0 !important
         .new-movie-list
             grid-template-columns: repeat(2, 1fr)!important
             .new-movie
@@ -72,7 +75,14 @@
                 display: none !important
 
 @media (min-width: 768px) and (max-width: 1200px)
-    .new-movie-list
-        grid-template-columns: repeat(4, 1fr)
-        .new-movie:nth-child(n+5)
-            display: none
+    .new-movies
+        padding: 20px 0 !important
+        .new-movies-title
+            h2
+                padding: 20px 0 !important
+        .new-movie-list
+            .new-movie
+                padding: 0 !important
+                grid-template-columns: repeat(4, 1fr)
+            .new-movie:nth-child(n+5)
+                display: none
