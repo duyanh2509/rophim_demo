@@ -46,7 +46,7 @@ common-see-more, body main .content .categories .category-title .see-more {
   text-decoration: none;
 }
 
-common-categories-title, body main .genre-suggestions h2, body main .top-ten-movies .top-movies-title h2, body main .miss-old-disney .old-disney-movies .disney-movies-title h2, body main .cartoon-movies-for-adult .list-cartoon-movies .list-cartoon-movies-title h2, body main .newest-anime .newest-anime-banner .list-cartoon-movies-title h2 {
+common-categories-title, body main .genre-suggestions h2, body main .top-ten-movies .top-movies-title h2, body main .miss-old-disney .old-disney-movies .disney-movies-title h2, body main .cartoon-movies-for-adult .list-cartoon-movies .list-cartoon-movies-title h2, body main .newest-anime .newest-anime-banner .list-cartoon-movies-title h2, .list-new-movie .new-movies .new-movies-title h2 {
   font-size: 25.2px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
@@ -69,6 +69,18 @@ common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-de
   color: white;
 }
 
+common-user-comment-title, body main .user-reaction .top-comment .comment-container .comment-title, body main .user-reaction .top-comment .irt-table .ranking-box .comment-title, body main .user-reaction .top-comment .irt-table .most-famous-comment .comment-title, .irt-table .ranking-box .comment-title {
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+common-user-comment-parapraph, body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment .name-comment-movie .user-comment, body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment .name-comment-movie .comment-movie {
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 .list-new-movie {
   width: 100%;
   padding: 0 20px;
@@ -82,12 +94,6 @@ common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-de
   flex-direction: column;
   padding: 20px;
   gap: 1rem;
-}
-.list-new-movie .new-movies .new-movies-title {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  margin: 0;
 }
 .list-new-movie .new-movies .new-movie-list {
   display: grid;
@@ -103,7 +109,7 @@ common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-de
   gap: 0.75rem;
 }
 .list-new-movie .new-movies .new-movie-list .new-movie .new-movie-img {
-  max-width: 183px;
+  max-width: 100%;
   max-height: 274px;
   width: 100%;
   padding-bottom: 150%;
@@ -133,17 +139,97 @@ common-topic-detail, body main .genre-suggestions .list-genres .genre1 .genre-de
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+@media (max-width: 767px) {
+  .new-movies {
+    padding: 0 !important;
+  }
+  .new-movies .new-movie-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .new-movies .new-movie-list .new-movie {
+    padding: 0 !important;
+  }
+  .new-movies .new-movie-list .new-movie:nth-child(n+3) {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .new-movie-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .new-movie-list .new-movie:nth-child(n+5) {
+    display: none;
+  }
+}
+.irt-table {
+  width: 100%;
+  display: flex;
+}
+.irt-table .ranking-box {
+  color: #fff;
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.1333333333);
+}
+.irt-table .ranking-box .comment-title .ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.irt-table .ranking-box .comment-title .ranking-list .ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #ddd;
+  padding: 10px;
+}
+.irt-table .ranking-box .comment-title .ranking-list .ranking-item .rank-number {
+  font-weight: bold;
+  width: 1.5rem;
+  text-align: right;
+}
+.irt-table .ranking-box .comment-title .ranking-list .ranking-item .rank-number .thumbnail-wrapper {
+  flex: 0 0 auto;
+  aspect-ratio: 25/36;
+  max-width: 25px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.irt-table .ranking-box .comment-title .ranking-list .ranking-item .rank-number .thumbnail-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.irt-table .ranking-box .comment-title .ranking-list .ranking-item .rank-number .movie-title {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.irt-table .see-more-comment {
+  font-size: 12.25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(255, 255, 255, 0.3333333333);
+}
+
 body header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: #0F111A;
   width: 100%;
   padding: 10px 20px;
-  gap: 1.5rem;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 body header .logo {
-  width: 150px;
+  width: 120px;
   flex-shrink: 0;
 }
 body header .logo img {
@@ -164,17 +250,21 @@ body header .search-bar input {
 }
 body header .nav-menu {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 2 1 400px;
   gap: 0.5rem;
 }
 body header .nav-menu a {
   text-decoration: none;
   color: white;
   font-size: 13px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 0 8px;
+  white-space: nowrap;
 }
 body header .user-actions {
   display: flex;
+  flex-shrink: 0;
   padding: 0 20px;
 }
 body header .user-actions .account {
@@ -190,7 +280,6 @@ body header .user-actions .account a {
 body header .user-actions .member {
   display: flex;
   align-items: center;
-  border: 1px solid white;
   border-radius: 13px;
   width: 125px;
   height: 40.58px;
@@ -202,6 +291,23 @@ body header .user-actions .member a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bolder;
   color: #333;
+}
+body header .search-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  margin-left: auto;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  body header .search-bar,
+  body header .nav-menu,
+  body header .user-actions {
+    display: none !important;
+  }
+  body header .search-icon {
+    display: block;
+  }
 }
 body main {
   width: 100%;
@@ -503,13 +609,30 @@ body main .genre-suggestions .list-genres .other-genre .genre-detail {
   align-items: flex-start;
   justify-content: flex-end;
 }
+body main .genre-suggestions .genre-suggestions .list-genres {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+@media (max-width: 767px) {
+  body main .genre-suggestions .list-genres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  body main .genre-suggestions .list-genres .genre4,
+  body main .genre-suggestions .list-genres .genre5,
+  body main .genre-suggestions .list-genres .genre6,
+  body main .genre-suggestions .list-genres .other-genre {
+    display: none;
+  }
+}
 body main .content {
   width: 100%;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #191B24;
+  background: linear-gradient(0deg, rgba(40, 43, 58, 0) 20%, rgb(40, 43, 58));
 }
 body main .content .categories {
   display: flex;
@@ -555,10 +678,48 @@ body main .content .categories .movie-list .movie .movie-img-container img {
   border-radius: 10px;
 }
 body main .content .categories .movie-list .movie p {
-  padding: 12px 16px;
+  height: 48px;
+  padding: 0 8px;
   font-size: 14px;
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.4;
+  overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  body main .content .categories {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body main .content .categories .category-title {
+    max-width: 100%;
+  }
+  body main .content .categories .movie-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body main .content .categories .movie-list .movie:nth-child(n+4) {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  body main .content .categories {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 !important;
+  }
+  body main .content .categories .category-title {
+    max-width: 100%;
+  }
+  body main .content .categories .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body main .content .categories .movie:nth-child(n+3) {
+    display: none;
+  }
 }
 body main .top-ten-movies {
   width: 100%;
@@ -671,6 +832,41 @@ body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-
   font-size: 13px;
   color: #ccc;
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  body main .top-ten-movies .top-movie-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  body main .top-ten-movies .top-movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  body main .top-ten-movies .top-movie-list .top-movie:nth-child(n+3) {
+    display: none;
+  }
+  body main .top-ten-movies .top-movie-list .top-movie .thumbnail {
+    height: 240px;
+  }
+  body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .top-number {
+    font-size: 38px;
+  }
+  body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe .title {
+    font-size: 16px;
+  }
+  body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe .sub-title {
+    font-size: 13px;
+  }
+  body main .top-ten-movies .top-movie-list .top-movie .top-movie-describe .other-describe ul {
+    font-size: 12px;
+  }
+}
 body main .miss-old-disney {
   width: 100%;
   padding: 0 20px;
@@ -699,7 +895,7 @@ body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie {
   gap: 0.75rem;
 }
 body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .dis-movie-img {
-  max-width: 183px;
+  max-width: 100%;
   max-height: 274px;
   width: 100%;
   padding-bottom: 150%;
@@ -723,6 +919,30 @@ body main .miss-old-disney .old-disney-movies .disney-movie-list .disney-movie .
   bottom: 0;
   object-fit: cover;
   opacity: 1;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  body main .miss-old-disney .old-disney-movies {
+    padding: 0 !important;
+  }
+  body main .miss-old-disney .old-disney-movies .disney-movie-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  body main .miss-old-disney .old-disney-movies {
+    padding: 0 !important;
+  }
+  body main .miss-old-disney .disney-movie-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+  }
+  body main .miss-old-disney .disney-movie-list .disney-movie {
+    padding: 0 !important;
+  }
+  body main .miss-old-disney .disney-movie-list .disney-movie:nth-child(n+3) {
+    display: none;
+  }
 }
 body main .cartoon-movies-for-adult {
   width: 100%;
@@ -776,6 +996,25 @@ body main .cartoon-movies-for-adult .list-cartoon-movies .cartoon-for-adult-movi
   bottom: 0;
   object-fit: cover;
   opacity: 1;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  body main .cartoon-movies-for-adult .cartoon-for-adult-movie-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  body main .cartoon-movies-for-adult .list-cartoon-movies {
+    padding: 0 !important;
+  }
+  body main .cartoon-movies-for-adult .cartoon-for-adult-movie-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  body main .cartoon-movies-for-adult .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list .cartoon-movie {
+    padding: 0 !important;
+  }
+  body main .cartoon-movies-for-adult .cartoon-for-adult-movie-container .cartoon-for-adult-movie-list:nth-child(n+5) {
+    display: none;
+  }
 }
 body main .newest-anime {
   width: 100%;
@@ -967,7 +1206,6 @@ body main .user-reaction {
 }
 body main .user-reaction .top-comment {
   width: 100%;
-  padding: 20px;
   gap: 4rem;
   border: 1px solid rgba(255, 255, 255, 0.1333333333);
   border-radius: 30px;
@@ -976,18 +1214,13 @@ body main .user-reaction .top-comment .comment-container {
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1333333333);
   padding: 1.5rem 2rem;
-}
-body main .user-reaction .top-comment .comment-container .comment-title {
-  font-size: 14px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  margin-bottom: 20px;
 }
 body main .user-reaction .top-comment .comment-container .users-comment {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
 body main .user-reaction .top-comment .comment-container .users-comment .list-comment {
@@ -1024,8 +1257,8 @@ body main .user-reaction .top-comment .comment-container .users-comment .list-co
   width: calc(100% - 20px);
 }
 body main .user-reaction .top-comment .comment-container .users-comment .list-comment .user-comment-content .avatar {
-  width: 46px;
-  height: 46px;
+  width: 20%;
+  height: auto;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 0.5rem;
@@ -1045,8 +1278,8 @@ body main .user-reaction .top-comment .comment-container .users-comment .list-co
   line-height: 1.4;
 }
 body main .user-reaction .top-comment .comment-container .users-comment .list-comment .movie-img {
-  width: 50px;
-  height: 57px;
+  width: 15%;
+  aspect-ratio: 10/13;
   position: absolute;
   top: 40px;
   right: 50px;
@@ -1056,6 +1289,100 @@ body main .user-reaction .top-comment .comment-container .users-comment .list-co
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+body main .user-reaction .top-comment .comment-container .users-comment .list-comment .movie-title {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body main .user-reaction .top-comment .irt-table {
+  width: 100%;
+  display: flex;
+}
+body main .user-reaction .top-comment .irt-table .ranking-box {
+  padding: 1.5rem;
+  color: #fff;
+  flex: 1;
+}
+body main .user-reaction .top-comment .irt-table .ranking-box .ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+body main .user-reaction .top-comment .irt-table .ranking-box .ranking-list .ranking-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #ddd;
+  padding: 10px;
+}
+body main .user-reaction .top-comment .irt-table .ranking-box .ranking-list .ranking-item .rank-number {
+  font-size: 18.6px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #AAAAAA;
+}
+body main .user-reaction .top-comment .irt-table .ranking-box .ranking-list .ranking-item .thumbnail-wrapper {
+  flex: 0 0 auto;
+  aspect-ratio: 25/36;
+  max-width: 25px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body main .user-reaction .top-comment .irt-table .ranking-box .ranking-list .ranking-item .thumbnail-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment {
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: #fff;
+  flex: 1;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment {
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3333333333);
+  padding: 10px;
+  gap: 1em;
+  align-items: center;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment .user-comment-avatar {
+  flex: 0 0 auto;
+  aspect-ratio: 30/30;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment .user-comment-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment .name-comment-movie {
+  display: flex;
+  flex-direction: column;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment .name-comment-movie .user-comment .comment-movie {
+  color: #AAAAAA;
+}
+body main .user-reaction .top-comment .irt-table .most-famous-comment .list-newest-comment .each-comment .name-comment-movie .comment-movie {
+  color: rgba(255, 255, 255, 0.3333333333);
+}
+@media (max-width: 1200px) {
+  body main .newest-anime {
+    display: none;
+  }
+  body main .user-reaction {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
