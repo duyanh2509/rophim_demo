@@ -974,39 +974,39 @@ body main .top-ten-movies .top-movies .top-movie-list .top-movie .top-movie-desc
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
-@media (min-width: 768px) and (max-width: 1359px) and (max-width: 767px) {
-  body main .top-movies {
+@media (max-width: 767px) {
+  body main .top-ten-movies .top-movies {
     padding: 0 !important;
   }
-  body main .top-movies .top-movies-title h2 {
+  body main .top-ten-movies .top-movies .top-movies-title h2 {
     padding: 20px 0 10px 0 !important;
   }
-  body main .top-movies .top-movie-list {
+  body main .top-ten-movies .top-movies .top-movie-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
     gap: 1rem;
   }
-  body main .top-movies .top-movie-list .top-movie:nth-child(n+3) {
+  body main .top-ten-movies .top-movies .top-movie-list .top-movie:nth-child(n+3) {
     display: none;
   }
-  body main .top-movies .top-movie-list .top-movie .thumbnail {
+  body main .top-ten-movies .top-movies .top-movie-list .top-movie .thumbnail {
     height: 240px;
   }
-  body main .top-movies .top-movie-list .top-movie .top-movie-describe {
+  body main .top-ten-movies .top-movies .top-movie-list .top-movie .top-movie-describe {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
   }
-  body main .top-movies .top-movie-list .top-movie .top-movie-describe .top-number {
+  body main .top-ten-movies .top-movies .top-movie-list .top-movie .top-movie-describe .top-number {
     font-size: 38px;
   }
-  body main .top-movies .top-movie-list .top-movie .top-movie-describe .other-describe .title {
+  body main .top-ten-movies .top-movies .top-movie-list .top-movie .top-movie-describe .other-describe .title {
     font-size: 16px;
   }
-  body main .top-movies .top-movie-list .top-movie .top-movie-describe .other-describe .sub-title {
+  body main .top-ten-movies .top-movies .top-movie-list .top-movie .top-movie-describe .other-describe .sub-title {
     font-size: 13px;
   }
-  body main .top-movies .top-movie-list .top-movie .top-movie-describe .other-describe ul {
+  body main .top-ten-movies .top-movies .top-movie-list .top-movie .top-movie-describe .other-describe ul {
     font-size: 12px;
   }
 }

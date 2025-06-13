@@ -703,7 +703,8 @@ body
                     .top-movie-list
                         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
 
-            @media (max-width: 767px)
+        @media (max-width: 767px)
+            .top-ten-movies
                 .top-movies
                     padding: 0 !important
                     .top-movies-title
@@ -711,7 +712,7 @@ body
                             padding: 20px 0 10px 0 !important
                     .top-movie-list
                         display: grid
-                        grid-template-columns: repeat(2, 1fr)
+                        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important
                         gap: 1rem
                         .top-movie
                             &:nth-child(n+3)
