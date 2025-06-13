@@ -69,6 +69,7 @@ body
                 height: 40.58px
                 justify-content: center
                 background-color: white
+                margin-left: 16px
                 a
                     font-size: 14px
                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -244,11 +245,46 @@ body
                         height: 100%
                         object-fit: fill
                         border-radius: 10px
+        @media  ( min-width: 640px )
+            .main-banner
+                margin-top: 55px
+                .movie-poster-container
+                    .movie-content
+                        .banner-title-tele
+                            display: none
+        @media  ( max-width: 640px )
+            .main-banner
+                margin-top: 55px
+                max-height: 350px
+                .movie-poster-container
+                    .movie-content
+                        justify-content: center
+                        align-items: center
+                        width: 100%
+                        max-width: none
+                        .movie-title-img
+                            display: none
+                        .movie-describe
+                            display: none
+                .right-side
+                    width: 100%
+                    padding: 0 0 20px 0
+                    justify-content: center
+                    .right-side-movie
+                        width: 30px
+                        height: 30px
+                        border-radius: 100%
+                        border: 2px solid #282B3A
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
 
         .genre-suggestions
             width: 100%
             background-color: #191b24
             padding: 20px
+            padding-bottom: 50px
             h2
                 @extend common-categories-title
 
@@ -411,12 +447,15 @@ body
                     .genre6,
                     .other-genre
                         display: none
-        @media (min-width: 768px) and (max-width: 1200px)
+        @media (min-width: 768px) and (max-width: 1359px)
             .genre-suggestions
                 h2
                     padding: 0 !important
             .list-genres
                 padding: 20px 0 !important
+                display: grid
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important
+
         .content
             width: 100%
             padding: 20px 20px
@@ -430,6 +469,7 @@ body
                 gap: 1rem
                 justify-content: center
                 align-items: center
+                padding-bottom: 32px
                 .category-title
                     display: flex
                     flex-direction: column
@@ -478,7 +518,30 @@ body
                             text-align: center
                             line-height: 1.4
                             overflow: hidden
-            @media (min-width: 768px) and (max-width: 1200px)
+            @media (min-width: 1360px) and (max-width: 1599px)
+                .categories
+                    .category-title
+                        max-width: 100%
+                    .movie-list
+                        width: 100%
+                        grid-template-columns: repeat(3, 1fr)
+                        gap: 10px
+                        .movie
+                            width: 100%
+                            height: 100%
+                            .movie-img-container
+                                width: 100%
+                                height: 100%
+                                max-width: none
+                                max-height: none
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: cover
+                        .movie:nth-child(n+4)
+                            display: none
+
+            @media (min-width: 768px) and (max-width: 1359px)
                 .categories
                     flex-direction: column
                     align-items: flex-start
@@ -486,7 +549,20 @@ body
                     .category-title
                         max-width: 100%
                     .movie-list
+                        width: 100%
                         grid-template-columns: repeat(3, 1fr)
+                        .movie
+                            width: 100%
+                            height: 100%
+                            .movie-img-container
+                                max-width: none
+                                max-height: none
+                                width: 100%
+                                height: 100%
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: cover
                         .movie:nth-child(n+4)
                             display: none
 
@@ -509,142 +585,152 @@ body
             flex-direction: column
             gap: 1rem
             background-color: $primary
-            .top-movies-title
-                h2
-                    @extend common-categories-title
-            .top-movie-list
-                display: grid
-                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
-                gap: 1rem
-                .top-movie
-                    width: 100%
-                    height: auto
-                    &:nth-child(even)
-                        .thumbnail
-                            transform: scale(-1, 1)
-                            .top-movie-img
-                                transform: scale(1, 1)
-                                img
-                                    transform: scale(-1, 1)
-                    .thumbnail
-                        display: flex
-                        flex-direction: column
-                        text-align: center
-                        justify-content: space-between
-                        position: relative
+            padding-bottom: 50px
+            .top-movies
+                padding: 0 20px
+                margin-bottom: 19.2px
+                .top-movies-title
+                    h2
+                        @extend common-categories-title
+                .top-movie-list
+                    display: grid
+                    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+                    gap: 1rem
+                    .top-movie
                         width: 100%
-                        height: 406.5px
-                        &:hover
-                            .top-movie-img
-                                width: 98%
-                                height: 98%
-                                top: 4px
-                                left: 3px
-                                img
-                                    opacity: 0.8
-                            .top-movie-layer
-                                opacity: 1
-                        .top-movie-img
-                            position: absolute
-                            top: 0px
-                            left: 0px
-                            right: 0px
-                            bottom: 0px
-                            object-fit: cover
-                            z-index: 5
-                            transition: all 0.1s ease
-                            -webkit-clip-path: polygon(94.239% 100%, 5.761% 100%, 5.761% 100%, 4.826% 99.95%, 3.94% 99.803%, 3.113% 99.569%, 2.358% 99.256%, 1.687% 98.87%, 1.111% 98.421%, .643% 97.915%, .294% 97.362%, .075% 96.768%, 0 96.142%, 0 3.858%, 0 3.858%, .087% 3.185%, .338% 2.552%, .737% 1.968%, 1.269% 1.442%, 1.92% .984%, 2.672% .602%, 3.512% .306%, 4.423% .105%, 5.391% .008%, 6.4% .024%, 94.879% 6.625%, 94.879% 6.625%, 95.731% 6.732%, 96.532% 6.919%, 97.272% 7.178%, 97.942% 7.503%, 98.533% 7.887%, 99.038% 8.323%, 99.445% 8.805%, 99.747% 9.326%, 99.935% 9.88%, 100% 10.459%, 100% 96.142%, 100% 96.142%, 99.925% 96.768%, 99.706% 97.362%, 99.357% 97.915%, 98.889% 98.421%, 98.313% 98.87%, 97.642% 99.256%, 96.887% 99.569%, 96.06% 99.803%, 95.174% 99.95%, 94.239% 116%)
-                            clip-path: polygon(94.239% 100%, 5.761% 100%, 5.761% 100%, 4.826% 99.95%, 3.94% 99.803%, 3.113% 99.569%, 2.358% 99.256%, 1.687% 98.87%, 1.111% 98.421%, .643% 97.915%, .294% 97.362%, .075% 96.768%, 0 96.142%, 0 3.858%, 0 3.858%, .087% 3.185%, .338% 2.552%, .737% 1.968%, 1.269% 1.442%, 1.92% .984%, 2.672% .602%, 3.512% .306%, 4.423% .105%, 5.391% .008%, 6.4% .024%, 94.879% 6.625%, 94.879% 6.625%, 95.731% 6.732%, 96.532% 6.919%, 97.272% 7.178%, 97.942% 7.503%, 98.533% 7.887%, 99.038% 8.323%, 99.445% 8.805%, 99.747% 9.326%, 99.935% 9.88%, 100% 10.459%, 100% 96.142%, 100% 96.142%, 99.925% 96.768%, 99.706% 97.362%, 99.357% 97.915%, 98.889% 98.421%, 98.313% 98.87%, 97.642% 99.256%, 96.887% 99.569%, 96.06% 99.803%, 95.174% 99.95%, 94.239% 100%)
-                            img
-                                width: 100%
-                                height: 100%
-                                object-fit: cover
-                                transition: all 0.1s ease
-
-                        .top-movie-layer
-                            position: absolute
-                            top: 0px
-                            left: 0px
-                            right: 0px
-                            bottom: 0px
-                            clip-path: polygon(94.239% 100%,5.761% 100%,5.761% 100%,4.826% 99.95%,3.94% 99.803%,3.113% 99.569%,2.358% 99.256%,1.687% 98.87%,1.111% 98.421%,.643% 97.915%,.294% 97.362%,.075% 96.768%,0 96.142%,0 3.858%,0 3.858%,.087% 3.185%,.338% 2.552%,.737% 1.968%,1.269% 1.442%,1.92% .984%,2.672% .602%,3.512% .306%,4.423% .105%,5.391% .008%,6.4% .024%,94.879% 6.625%,94.879% 6.625%,95.731% 6.732%,96.532% 6.919%,97.272% 7.178%,97.942% 7.503%,98.533% 7.887%,99.038% 8.323%,99.445% 8.805%,99.747% 9.326%,99.935% 9.88%,100% 10.459%,100% 96.142%,100% 96.142%,99.925% 96.768%,99.706% 97.362%,99.357% 97.915%,98.889% 98.421%,98.313% 98.87%,97.642% 99.256%,96.887% 99.569%,96.06% 99.803%,95.174% 99.95%,94.239% 116%)
-                            z-index: 1
-                            width: 100%
-                            height: 100%
-                            background-color: #FFD875
-                            opacity: 0
-                            transition: all 0.1s ease
-
-                    .top-movie-describe
-                        display: flex
-                        align-items: center
-                        gap: 10px
-                        margin-top: 8px
-                        color: white
-                        display: flex
-                        .top-number
-                            font-size: 58.8px
-                            font-weight: 700
-                            background: linear-gradient(39deg, rgba(254, 207, 89, 1), rgba(255, 241, 204, 1))
-                            flex-shrink: 0
-                            -webkit-background-clip: text
-                            -webkit-text-fill-color: transparent
-                            font-style: italic
-                        .other-describe
+                        height: auto
+                        &:nth-child(even)
+                            .thumbnail
+                                transform: scale(-1, 1)
+                                .top-movie-img
+                                    transform: scale(1, 1)
+                                    img
+                                        transform: scale(-1, 1)
+                        .thumbnail
                             display: flex
                             flex-direction: column
-                            justify-content: center
-                            text-align: left
-                            .title
-                                @extend common-title
-                            .sub-title
-                                @extend common-sub-title
-                            ul
+                            text-align: center
+                            justify-content: space-between
+                            position: relative
+                            width: 100%
+                            height: 406.5px
+                            &:hover
+                                .top-movie-img
+                                    width: 98%
+                                    height: 98%
+                                    top: 4px
+                                    left: 3px
+                                    img
+                                        opacity: 0.8
+                                .top-movie-layer
+                                    opacity: 1
+                            .top-movie-img
+                                position: absolute
+                                top: 0px
+                                left: 0px
+                                right: 0px
+                                bottom: 0px
+                                object-fit: cover
+                                z-index: 5
+                                transition: all 0.1s ease
+                                -webkit-clip-path: polygon(94.239% 100%, 5.761% 100%, 5.761% 100%, 4.826% 99.95%, 3.94% 99.803%, 3.113% 99.569%, 2.358% 99.256%, 1.687% 98.87%, 1.111% 98.421%, .643% 97.915%, .294% 97.362%, .075% 96.768%, 0 96.142%, 0 3.858%, 0 3.858%, .087% 3.185%, .338% 2.552%, .737% 1.968%, 1.269% 1.442%, 1.92% .984%, 2.672% .602%, 3.512% .306%, 4.423% .105%, 5.391% .008%, 6.4% .024%, 94.879% 6.625%, 94.879% 6.625%, 95.731% 6.732%, 96.532% 6.919%, 97.272% 7.178%, 97.942% 7.503%, 98.533% 7.887%, 99.038% 8.323%, 99.445% 8.805%, 99.747% 9.326%, 99.935% 9.88%, 100% 10.459%, 100% 96.142%, 100% 96.142%, 99.925% 96.768%, 99.706% 97.362%, 99.357% 97.915%, 98.889% 98.421%, 98.313% 98.87%, 97.642% 99.256%, 96.887% 99.569%, 96.06% 99.803%, 95.174% 99.95%, 94.239% 116%)
+                                clip-path: polygon(94.239% 100%, 5.761% 100%, 5.761% 100%, 4.826% 99.95%, 3.94% 99.803%, 3.113% 99.569%, 2.358% 99.256%, 1.687% 98.87%, 1.111% 98.421%, .643% 97.915%, .294% 97.362%, .075% 96.768%, 0 96.142%, 0 3.858%, 0 3.858%, .087% 3.185%, .338% 2.552%, .737% 1.968%, 1.269% 1.442%, 1.92% .984%, 2.672% .602%, 3.512% .306%, 4.423% .105%, 5.391% .008%, 6.4% .024%, 94.879% 6.625%, 94.879% 6.625%, 95.731% 6.732%, 96.532% 6.919%, 97.272% 7.178%, 97.942% 7.503%, 98.533% 7.887%, 99.038% 8.323%, 99.445% 8.805%, 99.747% 9.326%, 99.935% 9.88%, 100% 10.459%, 100% 96.142%, 100% 96.142%, 99.925% 96.768%, 99.706% 97.362%, 99.357% 97.915%, 98.889% 98.421%, 98.313% 98.87%, 97.642% 99.256%, 96.887% 99.569%, 96.06% 99.803%, 95.174% 99.95%, 94.239% 100%)
+                                img
+                                    width: 100%
+                                    height: 100%
+                                    object-fit: cover
+                                    transition: all 0.1s ease
+
+                            .top-movie-layer
+                                position: absolute
+                                top: 0px
+                                left: 0px
+                                right: 0px
+                                bottom: 0px
+                                clip-path: polygon(94.239% 100%,5.761% 100%,5.761% 100%,4.826% 99.95%,3.94% 99.803%,3.113% 99.569%,2.358% 99.256%,1.687% 98.87%,1.111% 98.421%,.643% 97.915%,.294% 97.362%,.075% 96.768%,0 96.142%,0 3.858%,0 3.858%,.087% 3.185%,.338% 2.552%,.737% 1.968%,1.269% 1.442%,1.92% .984%,2.672% .602%,3.512% .306%,4.423% .105%,5.391% .008%,6.4% .024%,94.879% 6.625%,94.879% 6.625%,95.731% 6.732%,96.532% 6.919%,97.272% 7.178%,97.942% 7.503%,98.533% 7.887%,99.038% 8.323%,99.445% 8.805%,99.747% 9.326%,99.935% 9.88%,100% 10.459%,100% 96.142%,100% 96.142%,99.925% 96.768%,99.706% 97.362%,99.357% 97.915%,98.889% 98.421%,98.313% 98.87%,97.642% 99.256%,96.887% 99.569%,96.06% 99.803%,95.174% 99.95%,94.239% 116%)
+                                z-index: 1
+                                width: 100%
+                                height: 100%
+                                background-color: #FFD875
+                                opacity: 0
+                                transition: all 0.1s ease
+
+                        .top-movie-describe
+                            display: flex
+                            align-items: center
+                            gap: 10px
+                            margin-top: 8px
+                            color: white
+                            display: flex
+                            .top-number
+                                font-size: 58.8px
+                                font-weight: 700
+                                background: linear-gradient(39deg, rgba(254, 207, 89, 1), rgba(255, 241, 204, 1))
+                                flex-shrink: 0
+                                -webkit-background-clip: text
+                                -webkit-text-fill-color: transparent
+                                font-style: italic
+                            .other-describe
                                 display: flex
-                                gap: 0.5rem
-                                list-style: none
-                                padding: 0
-                                margin: 4px 0 0 0
-                                font-size: 13px
-                                color: #ccc
-        @media (min-width: 768px) and (max-width: 1200px)
+                                flex-direction: column
+                                justify-content: center
+                                text-align: left
+                                .title
+                                    @extend common-title
+                                .sub-title
+                                    @extend common-sub-title
+                                ul
+                                    display: flex
+                                    gap: 0.5rem
+                                    list-style: none
+                                    padding: 0
+                                    margin: 4px 0 0 0
+                                    font-size: 13px
+                                    color: #ccc
+        @media (min-width: 1360px) and (max-width: 1599px)
+            .top-ten-movies
+                .top-movie-list
+                    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr))
+                    gap: 1rem
+                    overflow: hidden
+        @media (min-width: 768px) and (max-width: 1359px)
             .top-ten-movies
                 .top-movies-title
                     h2
                         padding: 20px 0 10px 0 !important
-                .top-movie-list
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+                    .top-movie-list
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
 
-        @media (max-width: 767px)
-            .top-ten-movies
+            @media (max-width: 767px)
                 .top-movies
+                    padding: 0 !important
                     .top-movies-title
                         h2
                             padding: 20px 0 10px 0 !important
-                .top-movie-list
-                    display: grid
-                    grid-template-columns: repeat(2, 1fr)
-                    gap: 1rem
-                    .top-movie
-                        &:nth-child(n+3)
-                            display: none
+                    .top-movie-list
+                        display: grid
+                        grid-template-columns: repeat(2, 1fr)
+                        gap: 1rem
+                        .top-movie
+                            &:nth-child(n+3)
+                                display: none
 
-                    .top-movie
-                        .thumbnail
-                            height: 240px
-                        .top-movie-describe
-                            flex-direction: column
-                            align-items: flex-start
-                            gap: 6px
-                            .top-number
-                                font-size: 38px
-                            .other-describe
-                                .title
-                                    font-size: 16px
-                                .sub-title
-                                    font-size: 13px
-                                ul
-                                    font-size: 12px
+                        .top-movie
+                            .thumbnail
+                                height: 240px
+                            .top-movie-describe
+                                flex-direction: column
+                                align-items: flex-start
+                                gap: 6px
+                                .top-number
+                                    font-size: 38px
+                                .other-describe
+                                    .title
+                                        font-size: 16px
+                                    .sub-title
+                                        font-size: 13px
+                                    ul
+                                        font-size: 12px
         .miss-old-disney
             width: 100%
             padding: 0 20px
@@ -652,6 +738,7 @@ body
             flex-direction: column
             gap: 1rem
             background-color: $primary
+            padding-bottom: 50px
             .old-disney-movies
                 display: flex
                 flex-direction: column
@@ -669,7 +756,6 @@ body
                         flex-direction: column
                         text-align: center
                         justify-content: space-between
-                        padding: 0 20px
                         gap: .75rem
                         .dis-movie-img
                             max-width: 100%
@@ -716,7 +802,7 @@ body
                     gap: 0
                     .disney-movies-title
                         h2
-                            padding: 20px 0 10px 0 !important
+                            padding: 0 0 10px 0 !important
                 .disney-movie-list
                     display: grid
                     grid-template-columns: repeat(2, 1fr) !important
@@ -733,6 +819,7 @@ body
             flex-direction: column
             gap: 1rem
             background-color: $primary
+            padding-bottom: 50px
             .list-cartoon-movies
                 display: flex
                 flex-direction: column
@@ -751,7 +838,6 @@ body
                             flex-direction: column
                             text-align: center
                             justify-content: space-between
-                            padding: 0 20px
                             gap: .75rem
                         .cartoon-movie-img
                             max-width: 275.5px
@@ -815,6 +901,7 @@ body
             flex-direction: column
             gap: 1rem
             background-color: $primary
+            padding-bottom: 50px
 
             .newest-anime-banner
                 padding: 20px
@@ -979,6 +1066,7 @@ body
             display: flex
             gap: 1rem
             background-color: $primary
+            padding-bottom: 50px
             .top-comment
                 width: 100%
                 gap: 4rem
