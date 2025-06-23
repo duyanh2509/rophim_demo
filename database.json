@@ -1,0 +1,105 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Tay Nghiệp Dư",
+      "english_title": "The Amateur",
+      "slug": "tay-nghiep-du",
+      "description": "Theo chân một nhà mật mã học của CIA, người đã tổng tiến cơ quan của anh ta để thả anh ta ra truy đuổi một nhóm khủng bố đã giết vợ anh ta ở London.",
+      "year": 2025,
+      "duration": "2h 03m",
+      "imdb_rating": 6.6,
+      "quality": "4K",
+      "age_limit": "T16",
+      "is_series": false,
+      "country": "Mỹ",
+      "genres": ["Hành Động", "Chiếu Rạp", "Gay Cấn", "Hình Sự"],
+      "topics": ["Marvel", "Lồng Tiếng Cực Mạnh"],
+      "thumbnail": "",
+      "banner": ""
+    },
+    {
+      "id": 2,
+      "title": "Một Seoul Chưa Biết Đến",
+      "slug": "mot-seoul-chua-biet-den",
+      "year": 2024,
+      "quality": "HD",
+      "is_series": true,
+      "country": "Hàn Quốc",
+      "genres": ["Tình Cảm"],
+      "topics": [],
+      "thumbnail": ""
+    },
+    {
+      "id": 3,
+      "title": "Bách Lạc Môn",
+      "slug": "bach-lac-mon",
+      "year": 2024,
+      "is_series": true,
+      "country": "Trung Quốc",
+      "genres": ["Cổ Trang"],
+      "topics": ["Xuyên Không"],
+      "thumbnail": ""
+    }, 
+    {
+      "id": 4,
+      "title": "Drive-Away Dolls",
+      "slug": "drive-away-dolls",
+      "english_title": "Drive-Away Dolls",
+      "year": 2024,
+      "is_series": false,
+      "country": "US-UK",
+      "genres": ["Hành Động"],
+      "topics": [],
+      "thumbnail": ""
+    },
+    {
+      "id": 5,
+      "title": "Kiện Tướng",
+      "slug": "kien-tuong",
+      "year": 2024,
+      "is_series": true,
+      "country": "Hàn Quốc",
+      "genres": ["Tình Cảm", "Học Đường"],
+      "topics": ["Sitcom"],
+      "thumbnail": ""
+    },
+    {
+      "id": 6,
+      "title": "Chuyện Ma Giảng Đường",
+      "slug": "chuyen-ma-giang-duong",
+      "english_title": "Haunted Universities 3",
+      "year": 2024,
+      "is_series": false,
+      "country": "Thái Lan",
+      "genres": ["Kinh Dị"],
+      "topics": [],
+      "thumbnail": ""
+    }
+  ],
+  "topics": [
+    { "id": 1, "name": "Marvel" },
+    { "id": 2, "name": "4K" },
+    { "id": 3, "name": "Sitcom" },
+    { "id": 4, "name": "Lồng Tiếng Cực Mạnh" },
+    { "id": 5, "name": "Xuyên Không" },
+    { "id": 6, "name": "Cổ Trang" }
+  ],
+  "genres": [
+    { "id": 1, "name": "Hành Động" },
+    { "id": 2, "name": "Chiếu Rạp" },
+    { "id": 3, "name": "Gay Cấn" },
+    { "id": 4, "name": "Hình Sự" },
+    { "id": 5, "name": "Tình Cảm" },
+    { "id": 6, "name": "Cổ Trang" },
+    { "id": 7, "name": "Kinh Dị" },
+    { "id": 8, "name": "Học Đường" }
+  ],
+  "categories": [
+    { "id": 1, "name": "Phim Hàn Quốc mới", "country": "Hàn Quốc" },
+    { "id": 2, "name": "Phim Trung Quốc mới", "country": "Trung Quốc" },
+    { "id": 3, "name": "Phim US-UK mới", "country": "US-UK" },
+    { "id": 4, "name": "Điện Ảnh Mới Coong", "special": true },
+    { "id": 5, "name": "Top 10 phim bộ hôm nay", "special": true }
+  ]
+}
